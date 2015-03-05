@@ -2,7 +2,7 @@
 
 ## Purpose:
 
-Docker image find the length of a string using Go, unicode compliant.
+Docker image to find the length of a string using Go, unicode compliant.
 
 ## Usage
 
