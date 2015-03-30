@@ -38,7 +38,7 @@ microservice:
   repo_url: 'https://github.com/cgmoore120/go-strlen'
   docker_hub_url: 'https://registry.hub.docker.com/u/cgmoore120/go-strlen/tags/manage/'
   category: 'go'
-  tags: ['go'. 'string', 'strlen']
+  tags: ['go', 'string', 'strlen']
   <<: *me
   published: true
   command: './go-strlen [string]'
