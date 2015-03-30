@@ -1,0 +1,54 @@
+url_param: &url_param
+  param_type: 'Url'
+  regex: '^https?:\/\/[\S]+$'
+
+alphanumeric_param:&aplhanumeric_param
+  param_type: 'Alphanumeric'
+  regex: '^[A-Za-z0-9]+$'
+
+alpha_param:&alpha_param
+  param_type: 'Alpha'
+  regex: '^[A-Za-z]+$'
+
+numeric_param:&numeric_param
+  param_type: 'Numeric'
+  regex: '^[0-9]+$'
+
+email_param:&email_param
+  param_type: 'Email'
+  regex: '^.+@.+$'
+
+string_param:&string_param
+  param_type: 'String'
+  regex: '^.*$'
+
+array_param:&array_param
+  param_type: 'Array'
+  regex:  '^\[.+\]$'
+
+me:&me
+  developer_name: 'cgmoore120'
+  developer_type: 'User'
+
+microservice:
+  name: 'go-strlen'
+  description: 'determine length of a given string'
+  docker_image: 'cgmoore120/go-strlen'
+  docker_image_tag: '1.1.0'
+  repo_url: 'https://github.com/cgmoore120/go-strlen'
+  docker_hub_url: 'https://registry.hub.docker.com/u/cgmoore120/go-strlen/tags/manage/'
+  category: 'go'
+  tags: ['go'. 'string', 'strlen']
+  <<: *me
+  published: true
+  command: './go-strlen [string]'
+  inputs:
+    string:
+      <<: *string_param
+      required: true
+      secure: false
+      description: 'the string to get the length of'
+  outputs:
+    integer:
+      param_type: 'Numeric'
+      description: 'the length of the string'

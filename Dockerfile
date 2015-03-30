@@ -2,4 +2,8 @@ FROM scratch
 
 MAINTAINER Chris Moore <chris@cloudspace.com>
 
-ADD go-strlen /go-strlen
+WORKDIR /
+
+ADD go-strlen go-strlen
+
+ADD ./microservice.yml microservice.yml
